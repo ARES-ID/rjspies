@@ -1,11 +1,11 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.composeMultiplatform)
-    alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.orgJetbrainsCompose)
+    alias(libs.plugins.orgJetbrainsKotlinPluginCompose)
+    alias(libs.plugins.orgJetbrainsKotlinMultiplatform)
+    alias(libs.plugins.ioGitlabArturboschDetekt)
 }
 
 kotlin {
@@ -30,7 +30,6 @@ kotlin {
     }
     
     sourceSets {
-        
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -38,10 +37,8 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.orgJetbrainsAndroidxLifecycle.lifecycleViewmodel)
+            implementation(libs.orgJetbrainsAndroidxLifecycle.lifecycleRuntimeCompose)
         }
     }
 }
-
-
