@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.orgJetbrainsKotlinPluginCompose) apply false
     alias(libs.plugins.orgJetbrainsKotlinMultiplatform) apply false
     alias(libs.plugins.ioGitlabArturboschDetekt) apply false
+    alias(libs.plugins.comDiffplugSpotless) apply false
 }
