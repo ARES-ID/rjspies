@@ -6,6 +6,21 @@ plugins {
     alias(libs.plugins.orgJetbrainsKotlinPluginCompose)
     alias(libs.plugins.orgJetbrainsKotlinMultiplatform)
     alias(libs.plugins.ioGitlabArturboschDetekt)
+    alias(libs.plugins.comDiffplugSpotless)
+}
+
+spotless {
+    kotlin {
+        ktlint().apply {
+            setEditorConfigPath("$rootDir/.editorconfig")
+        }
+    }
+
+    kotlinGradle {
+        ktlint().apply {
+            setEditorConfigPath("$rootDir/.editorconfig")
+        }
+    }
 }
 
 kotlin {
@@ -28,7 +43,7 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
