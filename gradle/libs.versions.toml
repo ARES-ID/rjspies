@@ -1,6 +1,6 @@
 [versions]
 androidx-lifecycle = "2.8.4"
-composeMultiplatform = "1.7.0"
+composeMultiplatform = "1.7.1"
 kotlin = "2.0.21"
 
 [libraries]
