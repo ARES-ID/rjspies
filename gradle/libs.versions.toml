@@ -1,7 +1,7 @@
 [versions]
 androidx-lifecycle = "2.8.4"
 composeMultiplatform = "1.7.1"
-kotlin = "2.0.21"
+kotlin = "2.1.0"
 
 [libraries]
 orgJetbrainsAndroidxLifecycle-lifecycleViewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
